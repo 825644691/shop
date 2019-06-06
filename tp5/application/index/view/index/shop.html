@@ -1,0 +1,22 @@
+{{extend name="public/base" /}}
+{{block name="body"}}
+<table class="table table-condensed">
+    <caption>精简表格布局</caption>
+    <thead>
+    <tr>
+        <th>书名</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>总价</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{volist name="shop" id="s" empty="$empty"}}
+    <tr>
+        <td><img src="{{$s.src}}" width="50px" alt=""></td>
+        <td>{{$s.name}}</td>
+        <td>{{$.price}}</td></tr>
+    {{/volist}}
+    </tbody>
+</table>
+{{/block}}
